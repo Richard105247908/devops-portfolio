@@ -16,6 +16,9 @@ def load_fleet(path: Path) -> list[dict]:
                         "vin": row["vin"],
                         "make": row["make"],
                         "model": row["model"],
-                        
-
+                        "year": int(row["year"]),
+                        "range": int(row["range"]),
+                        "topSpeed": int(row["topSpeed"]),
+                        "zeroSixty": float(row["zeroSixty"]),
+                        "mileage": int(row["mileage"]),
                     })
