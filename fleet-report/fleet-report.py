@@ -27,3 +27,7 @@ def load_fleet(path: Path) -> list[dict]:
     except FileNotFoundError:
         sys.exit(f"Error: {path} not found")
     return vehicles
+
+def main() -> None:
+    for vehicle in load_fleet(CSV_PATH):
+        
