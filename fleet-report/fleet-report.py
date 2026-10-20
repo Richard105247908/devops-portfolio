@@ -10,4 +10,5 @@ def load_fleet(path: Path) -> list[dict]:
     try:
         with path.open(newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f, skipinitialspace=True)
-        
+            for line_no,row in enumerate(reader, start=2):
+                
