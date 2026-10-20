@@ -22,3 +22,6 @@ def load_fleet(path: Path) -> list[dict]:
                         "zeroSixty": float(row["zeroSixty"]),
                         "mileage": int(row["mileage"]),
                     })
+                except (KeyError, ValueError) as err:
+                    print(f"Skipping line {line_no}:{err!r}", file=sys.stderr)
+            
