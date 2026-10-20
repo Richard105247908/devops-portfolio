@@ -24,4 +24,6 @@ def load_fleet(path: Path) -> list[dict]:
                     })
                 except (KeyError, ValueError) as err:
                     print(f"Skipping line {line_no}:{err!r}", file=sys.stderr)
-            
+    except FileNotFoundError:
+        sys.exit(f"Error: {path} not found")
+    return vehicles
