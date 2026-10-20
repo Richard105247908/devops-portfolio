@@ -1,0 +1,9 @@
+# Secrets and keys
+*.pem
+*.ppk
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
