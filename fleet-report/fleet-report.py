@@ -30,4 +30,10 @@ def load_fleet(path: Path) -> list[dict]:
 
 def main() -> None:
     for vehicle in load_fleet(CSV_PATH):
-        
+        for key, value in vehicle.items():
+            print(f"{key}: {value}")
+        print("------")
+
+
+if __name__== "__main__":
+    main()
